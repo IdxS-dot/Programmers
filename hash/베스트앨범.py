@@ -1,4 +1,4 @@
-import operator
+'''import operator
 
 genres = ["classic", "pop", "classic", "classic", "pop", "rock", "k-pop", "k-pop", "rock", "rnb"]
 plays = [500, 600, 150, 800, 2500, 400, 1200, 5800000, 3400, 200, 1540]	
@@ -43,5 +43,8 @@ def solution(genres, plays):
     
     return answer
 
-print(solution(genres, plays))
+print(solution(genres, plays))'''
 
+album_dict = {"pop": 3500, "classic": 2300}
+album_dict = sorted(album_dict.items(), key=lambda album_dict:album_dict[1], reverse=True)
+print(album_dict)

@@ -1,5 +1,5 @@
 from functools import reduce
-# clothes = [["yellowhat", "headgear"], ["bluesunglasses", "eyewear"], ["green_turban", "headgear"]]
+clothes = [["yellowhat", "headgear"], ["bluesunglasses", "eyewear"], ["green_turban", "headgear"]]
 def solution(clothes):
 
     answer = 0
@@ -14,8 +14,8 @@ def solution(clothes):
     # print(len(matches))
     # print(clothes[0][1])
 
-    answer = reduce(lambda x, y: x*y, matches.values()) - 1
+    answer = reduce(lambda x, y: x*y, matches.values(), mul) - 1
 
     return answer
 
-# print(solution(clothes))
+print(solution(clothes))

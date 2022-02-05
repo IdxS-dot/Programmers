@@ -69,10 +69,10 @@ print(solution(phone_book))'''
 # 테스트 케이스를 통과하지 못한 이유를 알아냈다. ["119", "97674223", "1195524421", "181", "18193931", "1813917384", "998", "10"]
 # 이런 식으로 주어지면 True를 반환해버리는 코드를 짰던 것이다.
 
-'''phone_book = ["119", "97674223", "1195524421", "181", "18193931", "1813917384", "998", "1192183782748932"]
+phone_book = ["119", "97674223", "1195524421", "181", "18193931", "1813917384", "998", "1192183782748932"]
 
 # print(sorted(phone_book)) # 문자열이라서 sort를 쓰면 119 - 1195...- 이렇게 정렬된다.
-print(sorted(phone_book[1:]))
+print(list(zip(sorted(phone_book), sorted(phone_book[1:]))))
 
 def solution(phone_book):
     phone_book = sorted(phone_book)
@@ -80,18 +80,16 @@ def solution(phone_book):
     for pNum1, pNum2 in zip(phone_book, phone_book[1:]):
         if pNum2.startswith(pNum1):
             return False
-
+    
+    
     return True
 
-print(solution(phone_book))'''
+print(solution(phone_book))
 
 # 위의 코드는 딱히 hash를 사용하지 않은 느낌이라 hash를 사용해서 다시 작성하였다. 물론 블로그를 참고해서...
 
-from operator import ifloordiv
-from sys import prefix
 
-
-phone_book = ["119", "97674223", "1195524421", "181", "18193931", "1813917384", "998", "1192183782748932"]
+'''phone_book = ["119", "97674223", "1195524421", "181", "18193931", "1813917384", "998", "1192183782748932"]
 
 def solution(phone_book):
     
@@ -113,3 +111,4 @@ def solution(phone_book):
 
     return answer
 
+'''
